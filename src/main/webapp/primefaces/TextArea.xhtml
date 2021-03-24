@@ -13,7 +13,6 @@
 	<title>Treinamento JSF e Primefaces</title>
 </h:head>
 <h:body>
-
 	<header>
 		<div style="float:  left; margin-left: 10px">
 			<h:graphicImage library="imagens" name="img003.png"></h:graphicImage>
@@ -23,6 +22,19 @@
 		</div>
 	</header>
 	
+	<h:form>
+		<h1>Area de texto</h1>
+		
+		<p:inputTextarea 	rows="6" 
+							style="width: 50%"  
+							maxlength="10" 
+							placeholder="Descrição"
+							counter="saida" 
+							counterTemplate="{0} caractes restantes(s)"/>
+		<br/>
+		<p:outputLabel id="saida"/>
+		
+	</h:form>
 	
 	
 	
