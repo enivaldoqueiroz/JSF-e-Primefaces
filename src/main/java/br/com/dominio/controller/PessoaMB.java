@@ -17,8 +17,8 @@ import br.com.dominio.model.Pessoa;
 @Named("bean")
 //@SessionScoped
 //@RequestScoped
-//@ApplicationScoped
-@ConversationScoped
+@ApplicationScoped
+//@ConversationScoped
 public class PessoaMB implements Serializable{
 
 	private static final long serialVersionUID = 1L;

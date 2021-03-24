@@ -6,27 +6,36 @@
 		xmlns:p="http://primefaces.org/ui">
 <h:head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	
+ 	<h:outputStylesheet library="css" name="file.css"></h:outputStylesheet>
+ 	
+	
 	<title>Insert title here</title>
 </h:head>
 <h:body>
+
+	<p:graphicImage library="imagens" name="img002.png" width="200px"></p:graphicImage>
 	
 	<h1>Informações de cadastro</h1>
 	<h:form id="form">
-		<h:panelGrid colums="2">
-			<p:outputLabel value="Nome"></p:outputLabel>
-			<p:inputText value="#{bean.pessoa.nome}"></p:inputText>
-			
-			<p:outputLabel value="E-mail"></p:outputLabel>
-			<p:inputText value="#{bean.pessoa.email}"></p:inputText>
-			
-			<p:outputLabel></p:outputLabel>
-			<p:commandButton value="Adicionar" action="#{bean.adicionar}" update="form tabelaPessoa"></p:commandButton>
-			
-			  
-			<h:outputText></h:outputText>
-			<h:commandButton value="Parar" action="#{bean.parar}"></h:commandButton>
-			
-		</h:panelGrid>		
+	
+		<p:panel header="Cadastro de clientes">
+			<h:panelGrid colums="2">
+				<p:outputLabel value="Nome"></p:outputLabel>
+				<p:inputText value="#{bean.pessoa.nome}" size="50"></p:inputText>
+				
+				<p:outputLabel value="E-mail"></p:outputLabel>
+				<p:inputText value="#{bean.pessoa.email}" size="50"></p:inputText>
+				
+				<p:outputLabel></p:outputLabel>
+				<p:commandButton value="Adicionar" action="#{bean.adicionar}" update="form tabelaPessoa"></p:commandButton>
+				
+				  
+				<h:outputText></h:outputText>
+				<h:commandButton value="Parar" action="#{bean.parar}"></h:commandButton>
+				
+			</h:panelGrid>	
+		</p:panel>	
 	</h:form>
 	
 	<h1>Lista de pessoas</h1>
@@ -34,7 +43,7 @@
 	<p:dataTable value="#{bean.pessoas}" var="p" border="1" id="tabelaPessoa">
 		<p:column headerText="Nome">#{p.nome}</p:column>
 		<p:column headerText="Email">#{p.email}</p:column>
-		<p:column headerText="Editar">
+		<p:column headerText="Editar" width="80">
 			<p:button value="Editar" outcome="/paginas/Sucesso.xhtml?parametro=#{p.nome}"></p:button>
 		</p:column>
 		
