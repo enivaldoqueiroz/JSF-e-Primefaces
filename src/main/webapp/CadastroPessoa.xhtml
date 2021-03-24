@@ -20,8 +20,10 @@
 			<h:outputText></h:outputText>
 			<h:commandButton value="Adicionar" action="#{bean.adicionar}"></h:commandButton>
 			
+			 
 			<h:outputText></h:outputText>
 			<h:commandButton value="Parar" action="#{bean.parar}"></h:commandButton>
+			
 		</h:panelGrid>		
 	</h:form>
 	
@@ -30,6 +32,10 @@
 	<h:dataTable value="#{bean.pessoas}" var="p" border="1">
 		<h:column>#{p.nome}</h:column>
 		<h:column>#{p.email}</h:column>
+		<h:column>
+			<h:button value="Editar" outcome="/paginas/Sucesso.xhtml?parametro=#{p.nome}"></h:button>
+		</h:column>
+		
 	</h:dataTable>
 
 </h:body>
