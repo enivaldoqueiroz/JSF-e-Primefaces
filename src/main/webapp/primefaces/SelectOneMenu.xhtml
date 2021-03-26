@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html 	xmlns="http://www.w3.org/1999/xhtml"
+		xmlns:h="http://xmlns.jcp.org/jsf/html"
+		xmlns:f="http://java.sun.com/jsf/core"
+		xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	
+ 	<h:outputStylesheet library="css" name="file.css"></h:outputStylesheet>
+ 	
+	
+	<title>Treinamento JSF e Primefaces</title>
+</h:head>
+<h:body>
+
+	<header>
+		<div style="float:  left; margin-left: 10px">
+			<h:graphicImage library="imagens" name="img003.png"></h:graphicImage>
+		</div>
+		<div  style="float: right;" >
+			<h:graphicImage library="imagens" name="img004.png" with="50"></h:graphicImage>
+		</div>
+	</header>
+	
+	<h:form id="form">
+		<p:panelGrid columns="2">
+			<h:outputText value="Evento"/>
+			<p:selectOneMenu value="#{ativadadeMB.atividade.nome}">
+				<f:selectItem itemLabel="Semana de Administração" itemValue="evento 1"/>
+				<f:selectItem itemLabel="Semana de Meio Ambiente" itemValue="evento 2"/>
+				<f:selectItem itemLabel="Workshop da Pragramação" itemValue="evento 3"/>
+			</p:selectOneMenu>
+		</p:panelGrid>
+	</h:form>
+	
+	
+
+</h:body>
+</html>
